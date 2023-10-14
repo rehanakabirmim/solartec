@@ -6,7 +6,7 @@ get_header();
 ?>
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5">
+    <div class="container-fluid page-header py-5 mb-5" style="background-image: url(img/carousel.jpg);">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -21,97 +21,57 @@ get_header();
     <!-- Page Header End -->
 
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Our Services</h6>
-                <h1 class="mb-4">We Are Pioneers In The World Of Renewable Energy</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-1.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-solar-panel fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Solar Panels</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-2.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-wind fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Wind Turbines</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-3.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-lightbulb fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Hydropower Plants</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-4.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-solar-panel fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Solar Panels</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-5.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-wind fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Wind Turbines</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-lightbulb fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Hydropower Plants</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   <!-- Service Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h6 class="text-primary">Our Services</h6>
+      <h1 class="mb-4">We Are Pioneers In The World Of Renewable Energy</h1>
     </div>
-    <!-- Service End -->
+    <div class="row g-4">
 
+    <!-- find all data  -->
+      <?php 
+
+        $select = "SELECT * FROM services";
+
+        $datas = mysqli_query($con, $select);
+       
+        // $data = mysqli_fetch_assoc($datas);
+
+       while ($data = mysqli_fetch_assoc($datas)) {
+        # code...
+        
+      ?>
+
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="service-item rounded overflow-hidden">
+          <img class="img-fluid" src="admin/uploads/<?= $data['service_image']; ?>" alt="">
+          <div class="position-relative p-4 pt-0">
+            <div class="service-icon">
+              <i class="><?=$data['service_icon']?> fa-3x"></i>
+            </div>
+            <h4 class="mb-3"><?= $data['service_title']?></h4>
+            <p><?= $data['service_details']?></p>
+            <a class="small fw-medium" href="">Read More <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <?php
+
+       }
+      
+      ?>
+
+
+
+    </div>
+  </div>
+</div>
+<!-- Service End -->
 
     <!-- Feature Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -179,10 +139,8 @@ get_header();
         </div>
     </div>
     <!-- Feature End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+   <!-- Testimonial Start -->
+   <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Testimonial</h6>
@@ -219,6 +177,7 @@ get_header();
                     <div class="testimonial-img position-relative">
                         <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">
                         <div class="btn-square bg-primary rounded-circle">
+                        <!-- <i class="bi bi-arrow-right"></i> -->
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                     </div>
@@ -232,8 +191,6 @@ get_header();
         </div>
     </div>
     <!-- Testimonial End -->
-        
-
 <?php
 get_footer();
 
