@@ -15,7 +15,7 @@ get_header();
     $Qb = mysqli_query($con, $selb);
     while ($banner = mysqli_fetch_assoc($Qb)) {
 
-      ?>
+    ?>
       <div class="owl-carousel-item position-relative" data-dot="<img src='admin/uploads/<?= $banner["ban_image"]; ?>'>">
 
         <img class="img-fluid" src="admin/uploads/<?= $banner['ban_image']; ?>" alt="">
@@ -131,40 +131,40 @@ get_header();
     </div>
     <div class="row g-4">
 
-    <!-- find all data  -->
-      <?php 
+      <!-- find all data  -->
+      <?php
 
-        $select = "SELECT * FROM services";
+      $select = "SELECT * FROM services";
 
-        $datas = mysqli_query($con, $select);
-       
-        // $data = mysqli_fetch_assoc($datas);
+      $datas = mysqli_query($con, $select);
 
-       while ($data = mysqli_fetch_assoc($datas)) {
+      // $data = mysqli_fetch_assoc($datas);
+
+      while ($data = mysqli_fetch_assoc($datas)) {
         # code...
-        
+
       ?>
 
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="service-item rounded overflow-hidden">
-          <img class="img-fluid" src="admin/uploads/<?= $data['service_image']; ?>" alt="">
-          <div class="position-relative p-4 pt-0">
-            <div class="service-icon">
-              <i class="><?=$data['service_icon']?> fa-3x"></i>
+        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="service-item rounded overflow-hidden">
+            <img class="img-fluid" src="admin/uploads/<?= $data['service_image']; ?>" alt="">
+            <div class="position-relative p-4 pt-0">
+              <div class="service-icon">
+                <i class="><?= $data['service_icon'] ?> fa-3x"></i>
+              </div>
+              <h4 class="mb-3"><?= $data['service_title'] ?></h4>
+              <p><?= $data['service_details'] ?></p>
+              <a class="small fw-medium" href="">Read More <i class="fa fa-arrow-right ms-2"></i>
+              </a>
             </div>
-            <h4 class="mb-3"><?= $data['service_title']?></h4>
-            <p><?= $data['service_details']?></p>
-            <a class="small fw-medium" href="">Read More <i class="fa fa-arrow-right ms-2"></i>
-            </a>
           </div>
         </div>
-      </div>
 
 
       <?php
 
-       }
-      
+      }
+
       ?>
 
 
@@ -263,8 +263,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-6.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-6.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -283,8 +282,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-5.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-5.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-5.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -302,8 +300,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-4.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-4.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-4.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -321,8 +318,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-3.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-3.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-3.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -340,8 +336,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-2.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-2.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-2.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -360,8 +355,7 @@ get_header();
         <div class="portfolio-img rounded overflow-hidden">
           <img class="img-fluid" src="img/img-600x400-1.jpg" alt="">
           <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-1.jpg"
-              data-lightbox="portfolio">
+            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-1.jpg" data-lightbox="portfolio">
               <i class="fa fa-eye"></i>
             </a>
             <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="">
@@ -435,99 +429,99 @@ get_header();
       <h1 class="mb-4">Experienced Team Members</h1>
     </div>
     <div class="row g-4">
-      
-    <!-- find all data  -->
-    <?php 
 
-$select = "SELECT * FROM team";
+      <!-- find all data  -->
+      <?php
 
-$data = mysqli_query($con, $select);
+      $select = "SELECT * FROM team";
 
-// $data = mysqli_fetch_assoc($datas);
+      $data = mysqli_query($con, $select);
 
-while ($team = mysqli_fetch_assoc($data)) {
-# code...
+      // $data = mysqli_fetch_assoc($datas);
 
-?>
-      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="team-item rounded overflow-hidden">
-          <div class="d-flex">
-            <img class="img-fluid w-75" src="admin/uploads/<?= $team['member_photo']; ?>" alt="">
-            <div class="team-social w-25">
-              <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="https:/youtube.com">
-                <i class="<?=$team['member_facebook']?>"></i>
-              </a>
-              <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="">
-              <!-- fab fa-twitter -->
-                <i class="<?=$team['member_twitter']?>"></i>
-              </a>
-              <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="">
-                <i class="<?=$team['member_instragram']?>"></i>
-              </a>
+      while ($team = mysqli_fetch_assoc($data)) {
+        # code...
+
+      ?>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="team-item rounded overflow-hidden">
+            <div class="d-flex">
+              <img class="img-fluid w-75" src="admin/uploads/<?= $team['member_photo']; ?>" alt="">
+              <div class="team-social w-25">
+                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="https:/youtube.com">
+                  <i class="<?= $team['member_facebook'] ?>"></i>
+                </a>
+                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="">
+                  <!-- fab fa-twitter -->
+                  <i class="<?= $team['member_twitter'] ?>"></i>
+                </a>
+                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href="">
+                  <i class="<?= $team['member_instragram'] ?>"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h5><?= $team['member_name'] ?></h5>
+              <span><?= $team['member_designation'] ?></span>
             </div>
           </div>
-          <div class="p-4">
-            <h5><?=$team['member_name']?></h5>
-            <span><?=$team['member_designation']?></span>
-          </div>
         </div>
-      </div>
       <?php } ?>
     </div>
   </div>
 </div>
 <!-- Team End -->
- <!-- Testimonial Start -->
- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Testimonial</h6>
-                <h1 class="mb-4">What Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h6 class="text-primary">Testimonial</h6>
+      <h1 class="mb-4">What Our Clients Say!</h1>
     </div>
-    <!-- Testimonial End -->
+    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+          <h5 class="mb-1">Client Name</h5>
+          <span class="fst-italic">Profession</span>
+        </div>
+      </div>
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+          <h5 class="mb-1">Client Name</h5>
+          <span class="fst-italic">Profession</span>
+        </div>
+      </div>
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+          <h5 class="mb-1">Client Name</h5>
+          <span class="fst-italic">Profession</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->
 <?php
 get_footer();
 ?>

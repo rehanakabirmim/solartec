@@ -3,7 +3,6 @@ require_once("functions/function.php");
 get_header();
 
 
-
 ?>
 
 
