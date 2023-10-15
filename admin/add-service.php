@@ -64,10 +64,28 @@ if(!empty($_POST)){
                                           <input type="text" class="form-control form_control" id="" name="Sdetails">
                                         </div>
                                       </div>
+                                     
                                       <div class="row mb-3">
                                         <label class="col-sm-3 col-form-label col_form_label">Service Icon</label>
                                         <div class="col-sm-7">
-                                          <input type="text" class="form-control form_control" id="" name="icon">
+                                          <input type="text" class="form-control form_control" id="service_icon" name="icon">
+                                        </div>
+                                      </div>
+                                      <div class="row mb-3">
+                                        <label class="col-sm-3 col-form-label col_form_label"></label>
+
+                                        <div class="col-sm-7" style="height: 100px; overflow: scroll;">
+                                          <?php 
+                                            require_once('all_font_class.php');
+
+                                            foreach ($fonts as $font) {
+                                            ?>
+
+                                              <i class="<?= 'fa' . ' ' . $font ?>" value="<?= 'fa' . ' ' . $font ?>" onclick="showValue('<?= 'fa' . ' ' . $font ?>')"></i>
+                                          <?php
+                                            }
+
+                                          ?>
                                         </div>
                                       </div>
                                      
@@ -88,3 +106,20 @@ if(!empty($_POST)){
     header('Location: index.php');
   }
 ?>
+<script>
+
+function showValue(a){
+
+ $font_class = a;
+
+ $service_icon = document.getElementById('service_icon');
+
+ $service_icon.setAttribute('value', $font_class)
+ document.getElementById('service_data_update_btn').style.display = "block";
+
+}
+
+</script>
+
+
+                                        
