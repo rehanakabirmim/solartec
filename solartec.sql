@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2023 at 11:34 AM
+-- Generation Time: Oct 15, 2023 at 09:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -59,6 +59,13 @@ CREATE TABLE `contact` (
   `con_message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`con_id`, `con_name`, `con_email`, `con_subject`, `con_message`) VALUES
+(4, 'Rehana Kabir Mim', 'rehanakabirmim@gmail.com', 'CSE', 'Computer Science &amp;  Engineering ');
+
 -- --------------------------------------------------------
 
 --
@@ -102,7 +109,7 @@ CREATE TABLE `services` (
 INSERT INTO `services` (`service_id`, `service_title`, `service_details`, `service_icon`, `service_image`) VALUES
 (5, '  Solar Maintenance and Repairs', 'Ensure the longevity and reliability of your solar system with our maintenance and repair services. We offer regular check-ups, cleaning, and prompt repairs to maximize your solar investments performance and efficiency.', '	fa fa-solar-panel', 'service_1697183142_903925.jpg'),
 (6, ' Solar Energy Consultation', ' Get personalized guidance from our solar energy experts to determine the best solar solutions for your specific needs. We provide comprehensive assessments, energy efficiency audits, and financial analyses to help you make informed decisions.', '	fa fa-solar-panel', 'service_1697183041_783525.jpg'),
-(7, ' Solar Panel Installation', ' Our expert team specializes in the efficient installation of high-quality solar panels, ensuring optimal energy capture and seamless integration with your property. We offer tailored solutions for residential, commercial, and industrial clients.', '	fa fa-solar-panel', 'service_1697182991_734859.jpg');
+(7, '  Solar Panel Installation', ' Our expert team specializes in the efficient installation of high-quality solar panels, ensuring optimal energy capture and seamless integration with your property. We offer tailored solutions for residential, commercial, and industrial clients.', 'fa fa-address-book', 'service_1697182991_734859.jpg');
 
 -- --------------------------------------------------------
 
@@ -152,9 +159,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_phone`, `user_email`, `user_username`, `user_password`, `role_id`, `user_photo`, `user_slug`) VALUES
-(2, 'marwa', '01680650424', 'marwa@gmail.com', 'nurtaj', '202cb962ac59075b964b07152d234b70', 1, 'user_1695711796_569487.jpg', 'U651a35ed81e1f'),
-(3, '  Garth Ward', '+1 (817) 717-1132', 'sisafu@mailinator.com', 'ayesha', 'c20ad4d76fe97759aa27a0c99bff6710', 5, 'user_1696609465_678155.png', 'U651a3603a0ee7'),
-(4, '   sami', '01680650422', 'samia@gmail.com', 'kakon', '6512bd43d9caa6e02c990b0a82652dca', 5, '', '  U651a364b98d12');
+(1, 'Rehana Kabir Mim', '01795913294', 'rehanakabirmim@gmail.com', 'mim', 'c20ad4d76fe97759aa27a0c99bff6710', 1, '', '  U652b8ece6f20b');
 
 --
 -- Indexes for dumped tables
@@ -213,7 +218,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -237,7 +242,7 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
