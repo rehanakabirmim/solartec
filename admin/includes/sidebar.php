@@ -7,7 +7,7 @@
                     <?php
                     if (!empty($_SESSION['pic'])) {
                         ?>
-                        <img class="img200" src=("uploads/<?= $_SESSION['pic'] ?>" alt="avatar" />
+                        <img class="img200" src="uploads/<?= $_SESSION['pic'] ?>" alt="avatar" />
                         <?php
 
                     } else {
