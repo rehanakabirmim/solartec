@@ -40,7 +40,7 @@ require_once('functions/function.php');
                                               $_SESSION['name']=$data['user_name'];
                                               $_SESSION['email']=$data['user_email'];
                                               $_SESSION['role']=$data['role_id'];
-                                            //   $_SESSION['pic']=$data['user_photo'];
+                                              // $_SESSION['pic']=$data['user_photo'];
                                               header('Location: index.php');
                                             }else{
                                               echo "Username or Password didn't match.";

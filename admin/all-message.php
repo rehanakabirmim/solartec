@@ -49,7 +49,7 @@ get_sitebar();
                                     <td><?php echo $id;  $id++; ?></td>
                                       <td><?= $data['con_name'];?></td>
                                       <td><?=$data['con_email']; ?></td>
-                                      <td><?=substr($data['con_subject'],0,40);?>...</td>
+                                      <td><?=substr($data['con_subject'],0,40);?></td>
                                       <td><?=substr($data['con_message'],0,50);?>...</td>
                                       
                                       

@@ -30,7 +30,7 @@ get_header();
                 <div class="p-lg-5 ps-lg-0">
                     <h6 class="text-primary">Contact Us</h6>
                     <h1 class="mb-4">Feel Free To Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.</p>
 
                     <?php
                     if (!empty($_POST)) {
@@ -106,3 +106,8 @@ get_header();
 get_footer();
 
 ?>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>  
